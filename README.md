@@ -125,3 +125,13 @@ Edit
 | Version | Date         | Author      | Remarks                          |
 |---------|--------------|-------------|----------------------------------|
 | 1.0     | 16-July-2025 | Anuj Jain   | Initial SOP for Ubuntu Services |
+
+## References
+
+- Ubuntu Systemd Documentation: https://www.freedesktop.org/wiki/Software/systemd/
+- systemctl Manual: https://man7.org/linux/man-pages/man1/systemctl.1.html
+- journalctl Manual: https://man7.org/linux/man-pages/man1/journalctl.1.html
+- Ansible Service Module: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
+- Nginx Official Docs: https://nginx.org/en/docs/
+- Docker Systemd Integration: https://docs.docker.com/config/daemon/systemd/
+
