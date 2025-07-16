@@ -6,17 +6,18 @@ This document provides a complete Standard Operating Procedure (SOP) for managin
 
 ## Table of Contents
 
-1. Objective  
-2. Scope  
-3. Prerequisites  
-4. What is a Service?  
-5. systemctl Command Reference  
-6. Common Examples  
-7. Service Validation Checklist  
-8. Troubleshooting  
-9. Config File Paths  
-10. Automation Using Ansible  
-11. Version History
+1. [Objective](#objective)  
+2. [Scope](#scope)  
+3. [Prerequisites](#prerequisites)  
+4. [What is a Service?](#what-is-a-service)  
+5. [systemctl Command Reference](#systemctl-command-reference)  
+6. [Common Examples](#common-examples)  
+7. [Service Validation Checklist](#service-validation-checklist)  
+8. [Troubleshooting](#troubleshooting)  
+9. [Config File Paths](#config-file-paths)  
+10. [Automation Using Ansible](#automation-using-ansible)  
+11. [Version History](#version-history)  
+12. [References](#references)
 
 ---
 
