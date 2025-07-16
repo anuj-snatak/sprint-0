@@ -118,9 +118,7 @@ Edit
 | jenkins     | `/etc/default/jenkins`              |
 | ufw         | `/etc/ufw/ufw.conf`                 |
 
-### ✅ Section: **Version History**
 
-markdown
 ## Version History
 
 | Version | Date         | Author      | Remarks                          |
