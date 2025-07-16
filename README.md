@@ -75,47 +75,53 @@ In Linux, services (also called daemons) are background processes that start on 
 
 ## Common Examples
 
-```bash
-sudo systemctl start docker
-sudo systemctl enable mysql
-sudo systemctl restart ssh
-sudo systemctl disable jenkins
-systemctl status nginx
-Service Validation Checklist
-Validation Step	Command	Expected Output
-Check if running	systemctl status <service>	active (running)
-Check if enabled on boot	systemctl is-enabled <service>	enabled
-View service logs	journalctl -u <service>	Logs should appear
-Validate nginx config	sudo nginx -t	syntax is ok
+| Command                                      | Description                       |
+|----------------------------------------------|-----------------------------------|
+| `sudo systemctl start docker`               | Start Docker service              |
+| `sudo systemctl enable mysql`               | Enable MySQL to start on boot     |
+| `sudo systemctl restart ssh`                | Restart SSH service               |
+| `sudo systemctl disable jenkins`            | Disable Jenkins auto-start        |
+| `systemctl status nginx`                    | Check status of Nginx             |
 
-Troubleshooting
-Problem	Suggested Solution
-Service fails to start	Use journalctl -xe to see detailed logs
-Port already in use	Run sudo lsof -i :<port> or `ss -tuln
-Invalid configuration	Test config (e.g., sudo nginx -t)
-Not auto-starting on boot	Run sudo systemctl enable <service>
+## Service Validation Checklist
 
-Config File Paths
-Service	Configuration File Path
-nginx	/etc/nginx/nginx.conf
-mysql	/etc/mysql/mysql.conf.d/
-docker	/etc/docker/daemon.json
-jenkins	/etc/default/jenkins
-ufw	/etc/ufw/ufw.conf
-
-Automation Using Ansible
-yaml
+| Validation Step              | Command                          | Expected Output         |
+|------------------------------|----------------------------------|-------------------------|
+| Check if service is running  | `systemctl status <service>`     | `active (running)`      |
+| Check if service is enabled  | `systemctl is-enabled <service>` | `enabled`               |
+| View service logs            | `journalctl -u <service>`        | Service logs appear     |
+| Validate nginx config        | `sudo nginx -t`                  | Syntax is OK message    |
+ Section: Troubleshooting
+markdown
 Copy
 Edit
-- name: Ensure nginx is running
-  service:
-    name: nginx
-    state: started
-    enabled: yes
-Version History
-Version	Date	Author	Remarks
-1.0	16-July-2025	Anuj Jain	Initial SOP for Ubuntu Services
+## Troubleshooting
 
-yaml
+| Issue                        | Cause / Fix                                              |
+|------------------------------|----------------------------------------------------------|
+| Service fails to start       | Run `journalctl -xe` to check logs                      |
+| Port already in use          | Use `sudo lsof -i :<port>` or `ss -tuln | grep :<port>`  |
+| Invalid config (e.g. nginx)  | Run `sudo nginx -t` to test config                      |
+| Not starting on boot         | Run `sudo systemctl enable <service>`                   |
+ Section: Config File Paths
+markdown
 Copy
 Edit
+## Config File Paths
+
+| Service     | Configuration File Path             |
+|-------------|--------------------------------------|
+| nginx       | `/etc/nginx/nginx.conf`             |
+| mysql       | `/etc/mysql/mysql.conf.d/`          |
+| docker      | `/etc/docker/daemon.json`           |
+| jenkins     | `/etc/default/jenkins`              |
+| ufw         | `/etc/ufw/ufw.conf`                 |
+
+### ✅ Section: **Version History**
+
+```markdown
+## Version History
+
+| Version | Date         | Author      | Remarks                          |
+|---------|--------------|-------------|----------------------------------|
+| 1.0     | 16-July-2025 | Anuj Jain   | Initial SOP for Ubuntu Services |
