@@ -126,6 +126,8 @@ Edit
 |---------|--------------|-------------|----------------------------------|
 | 1.0     | 16-July-2025 | Anuj Jain   | Initial SOP for Ubuntu Services |
 
+---
+
 ## References
 
 - Ubuntu Systemd Documentation: https://www.freedesktop.org/wiki/Software/systemd/
