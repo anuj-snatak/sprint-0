@@ -1,6 +1,6 @@
 # SOP for Managing Services in Ubuntu using `systemctl`
 
-This document provides a complete Standard Operating Procedure (SOP) for managing system services (daemons) on Ubuntu using `systemctl`. It includes viewing, starting, stopping, enabling, disabling, and troubleshooting services — essential for DevOps, system administrators, and students.
+This document provides a complete Standard Operating Procedure (SOP) for managing system services (daemons) on Ubuntu using `systemctl`. It includes viewing, starting, stopping, enabling, disabling, and troubleshooting services — essential for DevOps engineers, system administrators, and students.
 
 ---
 
@@ -45,7 +45,7 @@ Applies to:
 
 ## What is a Service?
 
-In Linux, services (daemons) are background processes that start on boot or on demand. Common ones include:
+In Linux, services (also called daemons) are background processes that start on boot or when required. Examples include:
 
 | Service     | Purpose              |
 |-------------|----------------------|
@@ -59,17 +59,17 @@ In Linux, services (daemons) are background processes that start on boot or on d
 
 ## systemctl Command Reference
 
-| Action             | Command                              | Description                            |
-|--------------------|---------------------------------------|----------------------------------------|
-| Start              | `sudo systemctl start nginx`         | Start service immediately              |
-| Stop               | `sudo systemctl stop nginx`          | Stop service                           |
-| Restart            | `sudo systemctl restart nginx`       | Stop and start again                   |
-| Reload             | `sudo systemctl reload nginx`        | Reload config without stopping         |
-| Enable (boot)      | `sudo systemctl enable nginx`        | Start on boot                          |
-| Disable (boot)     | `sudo systemctl disable nginx`       | Don't start on boot                    |
-| Status             | `systemctl status nginx`             | Show active/inactive/logs              |
-| Is Enabled?        | `systemctl is-enabled nginx`         | Check boot-start status                |
-| Logs               | `journalctl -u nginx`                | Show logs for the service              |
+| Action              | Command                                 | Description                           |
+|---------------------|------------------------------------------|----------------------------------------|
+| Start               | `sudo systemctl start <service>`        | Start the service immediately          |
+| Stop                | `sudo systemctl stop <service>`         | Stop the running service               |
+| Restart             | `sudo systemctl restart <service>`      | Restart the service                    |
+| Reload              | `sudo systemctl reload <service>`       | Reload service config without restart  |
+| Enable              | `sudo systemctl enable <service>`       | Enable service to start on boot        |
+| Disable             | `sudo systemctl disable <service>`      | Disable service from auto-start        |
+| Check Status        | `systemctl status <service>`            | Show current status of the service     |
+| Check if Enabled    | `systemctl is-enabled <service>`        | Show if service is enabled on boot     |
+| View Logs           | `journalctl -u <service>`               | View logs for the service              |
 
 ---
 
@@ -83,20 +83,20 @@ sudo systemctl disable jenkins
 systemctl status nginx
 Service Validation Checklist
 Validation Step	Command	Expected Output
-Service is running?	systemctl status <svc>	active (running)
-Auto-start on boot?	systemctl is-enabled <svc>	enabled
-Logs available?	journalctl -u <svc>	Log output shown
-Config syntax (nginx)?	sudo nginx -t	syntax is ok
+Check if running	systemctl status <service>	active (running)
+Check if enabled on boot	systemctl is-enabled <service>	enabled
+View service logs	journalctl -u <service>	Logs should appear
+Validate nginx config	sudo nginx -t	syntax is ok
 
 Troubleshooting
-Problem	Solution
-Service fails to start	journalctl -xe for logs
-Port already in use	sudo lsof -i :80 or `ss -tuln
-Invalid config (e.g. nginx)	sudo nginx -t
-Auto-start not working	sudo systemctl enable <service>
+Problem	Suggested Solution
+Service fails to start	Use journalctl -xe to see detailed logs
+Port already in use	Run sudo lsof -i :<port> or `ss -tuln
+Invalid configuration	Test config (e.g., sudo nginx -t)
+Not auto-starting on boot	Run sudo systemctl enable <service>
 
 Config File Paths
-Service	Config File Location
+Service	Configuration File Path
 nginx	/etc/nginx/nginx.conf
 mysql	/etc/mysql/mysql.conf.d/
 docker	/etc/docker/daemon.json
@@ -116,3 +116,6 @@ Version History
 Version	Date	Author	Remarks
 1.0	16-July-2025	Anuj Jain	Initial SOP for Ubuntu Services
 
+yaml
+Copy
+Edit
