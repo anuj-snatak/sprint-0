@@ -118,7 +118,11 @@ In Linux, services (also called daemons) are background processes that start on 
 |-----------------|------------|-----------|------------------|--------------------|--------|---------|--------|
 | Anuj Jain       | 17-07-25   | version 1 | N/A              | Prashnat          | Priyanka Balidkar | Rishabh | Piyush |
 
+## Contact Information
 
+| Name            | Email address |
+|-----------------|---------------|
+| Anuj Jain       | anuj.jain@mygurukulam.co      | 
 
 
 
@@ -129,7 +133,6 @@ In Linux, services (also called daemons) are background processes that start on 
 - Ubuntu Systemd Documentation: https://www.freedesktop.org/wiki/Software/systemd/
 - systemctl Manual: https://man7.org/linux/man-pages/man1/systemctl.1.html
 - journalctl Manual: https://man7.org/linux/man-pages/man1/journalctl.1.html
-- Ansible Service Module: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
 - Nginx Official Docs: https://nginx.org/en/docs/
 - Docker Systemd Integration: https://docs.docker.com/config/daemon/systemd/
 
