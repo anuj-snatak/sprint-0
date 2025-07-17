@@ -120,9 +120,11 @@ Edit
 
 ## Version History
 
-| Version | Date         | Author      | Remarks                          |
-|---------|--------------|-------------|----------------------------------|
-| 1.0     | 16-July-2025 | Anuj Jain   | Initial SOP for Ubuntu Services |
+| Author     | Created on | Version   | Last updated by | Internal Reviewer | L0                |        L1         | L2    |
+|------------|------------|---------|-------------------|---------------------------------------|------------------|--------|
+| Anuj Jain  | 17-07-25   | version 1 | N/A             | Prashnat          | Priyanka Balidkar | Rishabh          | Piyush |
+
+
 
 ---
 
