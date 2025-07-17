@@ -15,9 +15,8 @@ This document provides a complete Standard Operating Procedure (SOP) for managin
 7. [Service Validation Checklist](#service-validation-checklist)  
 8. [Troubleshooting](#troubleshooting)  
 9. [Config File Paths](#config-file-paths)  
-10. [Automation Using Ansible](#automation-using-ansible)  
-11. [Version History](#version-history)  
-12. [References](#references)
+10. [Version History](#version-history)  
+11. [References](#references)
 
 ---
 
