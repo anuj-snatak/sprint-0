@@ -91,10 +91,7 @@ In Linux, services (also called daemons) are background processes that start on 
 | Check if service is enabled  | `systemctl is-enabled <service>` | `enabled`               |
 | View service logs            | `journalctl -u <service>`        | Service logs appear     |
 | Validate nginx config        | `sudo nginx -t`                  | Syntax is OK message    |
- Section: Troubleshooting
-markdown
-Copy
-Edit
+
 ## Troubleshooting
 
 | Issue                        | Cause / Fix                                              |
@@ -103,10 +100,7 @@ Edit
 | Port already in use          | Use `sudo lsof -i :<port>` or `ss -tuln | grep :<port>`  |
 | Invalid config (e.g. nginx)  | Run `sudo nginx -t` to test config                      |
 | Not starting on boot         | Run `sudo systemctl enable <service>`                   |
- Section: Config File Paths
-markdown
-Copy
-Edit
+
 ## Config File Paths
 
 | Service     | Configuration File Path             |
