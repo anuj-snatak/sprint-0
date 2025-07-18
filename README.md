@@ -7,7 +7,6 @@
 | Version | Date       | Author      | Changes Made                          | Reviewed By |
 |---------|------------|-------------|---------------------------------------|-------------|
 | 1.0     | 17-07-25   | Anuj Jain   | Initial draft                         | Prashnat    |
-| 2.0     | 18-07-25   | [Your Name] | Improved structure, added best practices, troubleshooting tips, and security considerations | [Reviewer] |
 
 ### **1.2 Approval**  
 
@@ -15,7 +14,6 @@
 |-------------------|-------------|------------|------------|
 | Author            | Anuj Jain   | [Signature]| 17-07-25   |
 | Reviewer          | Prashnat    | [Signature]| 17-07-25   |
-| Approver (Ops Lead)| [Name]      | [Signature]| [Date]     |
 
 ---
 
