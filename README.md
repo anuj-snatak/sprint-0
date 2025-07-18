@@ -53,24 +53,20 @@ Applies to:
 
 ## What is a Service?
 
-In Linux, some background processes called services or daemons keep running automatically — either at system startup or when triggered. These services handle different tasks like networking, databases, web hosting, and automation.
+In Linux, services (also called daemons) are background programs that start automatically when the system boots, or run when needed. They handle important tasks without user interaction.
 
-Here are some commonly used Linux services:
+Here are a few common ones:
 
-Nginx:
-A fast and lightweight web server often used to serve static websites, act as a reverse proxy, or perform load balancing. It’s widely used for both production and development environments.
+nginx – A lightweight and fast web server used to host websites, act as a reverse proxy, or handle load balancing.
 
-MySQL:
-A widely-used relational database server. It stores data in a structured format and is commonly used in backend systems of web applications.
+mysql – A database service that stores and manages data for web apps or software.
 
-Docker:
-Docker helps in packaging applications into containers, making them portable and isolated from the underlying system. It supports the “build once, run anywhere” approach.
+docker – Runs containers. It's used to package apps with their dependencies so they work the same on any system.
 
-SSH (Secure Shell):
-SSH allows secure remote access to a machine’s terminal over the network. It’s essential for system administration and accessing remote servers.
+ssh – Lets you connect to another machine remotely and securely using the terminal.
 
-Jenkins:
-Jenkins is an automation tool used for continuous integration and continuous deployment (CI/CD). It helps developers build, test, and deploy code automatically.
+jenkins – An automation server used for building, testing, and deploying code (CI/CD).
+
 
 
 ---
