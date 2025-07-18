@@ -92,7 +92,7 @@ A **service** is a background process that runs continuously, handling tasks lik
 - Restrict service permissions (e.g., `User=www-data` in `nginx.service`).  
 
 ### **6.2 Performance & Stability**  
-⚡ **Do:**  
+ **Do:**  
 - Use `reload` instead of `restart` where possible (avoids downtime).  
 - Check dependencies with `systemctl list-dependencies <service>`.  
 
