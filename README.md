@@ -152,17 +152,4 @@ A **service** is a background process that runs continuously, handling tasks lik
 ## **10. Feedback & Revisions**  
 📩 **Contact:**  
 - **Author:** Anuj Jain (`anuj.jain@mygurukulam.co`)  
-- **Reviewer:** Prashnat (`[email]`)  
 
-**🗓 Next Review Date:** 18-10-25  
-
----
-
-### **Improvements in v2.0:**  
- **Added security best practices** (masking, user permissions).  
- **Enhanced troubleshooting section** with emergency recovery steps.  
- **Included a cheat sheet** for quick reference.  
- **Better formatting** for readability.  
- **Added document control & approval table.**  
-
-Would you like any additional sections (e.g., **"Backup & Restore Strategies"**)?
