@@ -1,10 +1,4 @@
 # **Standard Operating Procedure (SOP) for Managing Services in Ubuntu using `systemctl`**  
-**Document Version:** 2.0  
-**Last Updated:** 18-07-25  
-**Author:** Anuj Jain  
-**Reviewer:** Prashnat  
-
----
 
 ## **1. Document Control**  
 
@@ -39,12 +33,12 @@ This SOP provides a standardized approach to managing system services (daemons) 
 
 ## **3. Prerequisites**  
 
-✅ **System Requirements:**  
+ **System Requirements:**  
 - Ubuntu 20.04/22.04 LTS (systemd-based).  
 - `sudo` or root access.  
 - Services must be installed (e.g., `nginx`, `docker`).  
 
-✅ **Knowledge Requirements:**  
+ **Knowledge Requirements:**  
 - Basic Linux terminal commands.  
 - Understanding of service dependencies.  
 
@@ -94,7 +88,7 @@ A **service** is a background process that runs continuously, handling tasks lik
 ## **6. Best Practices & Security**  
 
 ### **6.1 Security Hardening**  
-🔒 **Do:**  
+ **Do:**  
 - Use `mask` for unnecessary services (e.g., `sudo systemctl mask telnet`).  
 - Always `disable` unused services (e.g., `sudo systemctl disable apache2` if using `nginx`).  
 - Restrict service permissions (e.g., `User=www-data` in `nginx.service`).  
@@ -118,7 +112,7 @@ A **service** is a background process that runs continuously, handling tasks lik
 | **Service stuck in "activating"** | `systemctl status <service>` | Check dependencies (`systemctl list-dependencies`). |
 
 ### **7.2 Emergency Recovery**  
-🚨 **If a critical service (e.g., `ssh`) fails:**  
+ **If a critical service (e.g., `ssh`) fails:**  
 1. **Check logs:** `journalctl -u ssh --no-pager -n 50`  
 2. **Force-restart:** `sudo systemctl reset-failed ssh && sudo systemctl restart ssh`  
 3. **Fallback:** Use a backup config (`cp /etc/ssh/sshd_config.bak /etc/ssh/sshd_config`).  
@@ -138,7 +132,7 @@ A **service** is a background process that runs continuously, handling tasks lik
 | `ufw`      | `/etc/ufw/ufw.conf` | Controls firewall. |
 
 ### **8.2 Quick Reference Cheat Sheet**  
-📌 **One-liners:**  
+ **One-liners:**  
 - **List all services:** `systemctl list-units --type=service`  
 - **Find failed services:** `systemctl --failed`  
 - **Reload systemd after config changes:** `sudo systemctl daemon-reload`  
@@ -153,11 +147,8 @@ A **service** is a background process that runs continuously, handling tasks lik
 ---
 
 ## **10. Feedback & Revisions**  
-📩 **Contact:**  
+ **Contact:**  
 - **Author:** Anuj Jain (`anuj.jain@mygurukulam.co`)  
-- **Reviewer:** Prashnat (`[email]`)  
-
-**🗓 Next Review Date:** 18-10-25  
 
 ---
 
