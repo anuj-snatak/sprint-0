@@ -1,3 +1,11 @@
+## Version History
+
+| Author          | Created on | Version   | Last updated by | Internal Reviewer |
+|-----------------|------------|-----------|------------------|--------------------|
+| Anuj Jain       | 17-07-25   | version 1 | N/A              | Prashnat          |
+
+
+
 # SOP for Managing Services in Ubuntu using `systemctl`
 
 This document provides a complete Standard Operating Procedure (SOP) for managing system services (daemons) on Ubuntu using `systemctl`. It includes viewing, starting, stopping, enabling, disabling, and troubleshooting services — essential for DevOps engineers, system administrators, and students.
@@ -112,11 +120,6 @@ In Linux, services (also called daemons) are background processes that start on 
 | ufw         | `/etc/ufw/ufw.conf`                 |
 
 
-## Version History
-
-| Author          | Created on | Version   | Last updated by | Internal Reviewer |
-|-----------------|------------|-----------|------------------|--------------------|
-| Anuj Jain       | 17-07-25   | version 1 | N/A              | Prashnat          |
 
 ## Contact Information
 
