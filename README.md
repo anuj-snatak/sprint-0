@@ -86,6 +86,172 @@ jenkins – An automation server used for building, testing, and deploying code 
 | View Logs           | `journalctl -u <service>`               | View logs for the service              |
 
 ---
+Bilkul bhai! Tu jo format chah raha hai (jaise ki headings ke under clearly explained commands), usi structure ko follow karte hue main har ek `systemctl` command ka explanation de raha hoon — professional, neat, aur documentation ke layak.
+
+---
+
+## 🔧 How to Use `systemctl` Commands (Linux Service Management)
+
+### ✅ Start a Service
+
+Use this command to **start** a service immediately without reboot.
+
+```bash
+sudo systemctl start <service>
+```
+
+**Purpose**: Activates the specified service.
+
+**Example**:
+
+```bash
+sudo systemctl start nginx
+```
+
+---
+
+### ⛔ Stop a Service
+
+Use this command to **stop** a running service.
+
+```bash
+sudo systemctl stop <service>
+```
+
+**Purpose**: Terminates the service that is currently active.
+
+**Example**:
+
+```bash
+sudo systemctl stop mysql
+```
+
+---
+
+### 🔁 Restart a Service
+
+Use this to **stop and then start** the service again — useful when config changes are made.
+
+```bash
+sudo systemctl restart <service>
+```
+
+**Example**:
+
+```bash
+sudo systemctl restart ssh
+```
+
+---
+
+### 🔃 Reload a Service (Without Restart)
+
+Used when you want the service to reload config files **without a full restart**.
+
+```bash
+sudo systemctl reload <service>
+```
+
+**Example**:
+
+```bash
+sudo systemctl reload apache2
+```
+
+---
+
+### 🚀 Enable a Service on Boot
+
+This command sets a service to automatically **start at system boot**.
+
+```bash
+sudo systemctl enable <service>
+```
+
+**Example**:
+
+```bash
+sudo systemctl enable docker
+```
+
+---
+
+### ❌ Disable a Service from Auto-Starting
+
+Prevent a service from starting **automatically at boot time**.
+
+```bash
+sudo systemctl disable <service>
+```
+
+**Example**:
+
+```bash
+sudo systemctl disable jenkins
+```
+
+---
+
+### 📊 Check Status of a Service
+
+See current status — whether active, inactive, failed, etc.
+
+```bash
+systemctl status <service>
+```
+
+**Example**:
+
+```bash
+systemctl status ssh
+```
+
+---
+
+### 🔍 Check if a Service is Enabled on Boot
+
+Shows whether the service is **set to auto-start** on boot.
+
+```bash
+systemctl is-enabled <service>
+```
+
+**Example**:
+
+```bash
+systemctl is-enabled mysql
+```
+
+---
+
+### 📝 View Service Logs
+
+Display logs for a particular service (uses `journalctl`).
+
+```bash
+journalctl -u <service>
+```
+
+**Example**:
+
+```bash
+journalctl -u nginx
+```
+
+---
+
+## 💡 Pro Tips:
+
+* Always replace `<service>` with the actual service name.
+* Use `sudo` if you're not logged in as root.
+* To list all active services:
+
+  ```bash
+  systemctl list-units --type=service
+  ```
+
+---
+
 
 
 
