@@ -54,11 +54,11 @@ Applies to:
 
 ---
 
-## 🔧 What is a Service?
+##  What is a Service?
 
 In Linux, **services (daemons)** are background processes that typically start automatically at boot or run when triggered. These services handle essential system or application-level tasks **without direct user interaction**.
 
-### 🧩 Common Linux Services
+###  Common Linux Services
 
 | Service   | Description                                                                                                                |
 | --------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -70,13 +70,6 @@ In Linux, **services (daemons)** are background processes that typically start a
 
 ---
 
-Agar chaaho toh isme aur bhi columns add kar sakte ho, jaise:
-✅ Default Port, 🔄 Start Command, 📦 Package Name, etc.
-
-Batana ho toh wo version bhi bana dunga.
-
-
----
 
 
 ---
@@ -97,9 +90,7 @@ Batana ho toh wo version bhi bana dunga.
 
 ---
 
----
-
-## 🔧 How to Use `systemctl` Commands (Linux Service Management)
+##  How to Use `systemctl` Commands (Linux Service Management)
 
 ###  Start a Service
 
@@ -137,7 +128,7 @@ sudo systemctl stop mysql
 
 ---
 
-### 🔁 Restart a Service
+###  Restart a Service
 
 Use this to **stop and then start** the service again — useful when config changes are made.
 
@@ -185,7 +176,7 @@ sudo systemctl enable docker
 
 ---
 
-### ❌ Disable a Service from Auto-Starting
+###  Disable a Service from Auto-Starting
 
 Prevent a service from starting **automatically at boot time**.
 
