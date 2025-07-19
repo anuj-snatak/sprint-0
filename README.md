@@ -1,8 +1,3 @@
-Yeh raha tumhaara **SOP Markdown**, jiska font styling aur visual appearance simple aur clean banaya gaya hai (no emojis, no bold overload, minimal clutter) — GitHub, GitLab, or any Markdown viewer ke liye perfect:
-
----
-
-````markdown
 # SOP for Managing Services in Ubuntu using `systemctl`
 
 This document provides a complete Standard Operating Procedure (SOP) for managing system services (daemons) on Ubuntu using `systemctl`. It includes viewing, starting, stopping, enabling, disabling, and troubleshooting services — essential for DevOps engineers, system administrators, and students.
