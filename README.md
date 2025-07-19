@@ -87,6 +87,74 @@ jenkins – An automation server used for building, testing, and deploying code 
 
 ---
 
+🔧 Systemctl Command Reference (Service Management in Linux)
+Below is a list of commonly used systemctl commands for managing services:
+
+ Start a Service
+bash
+Copy
+Edit
+sudo systemctl start <service>
+Starts the specified service immediately.
+
+ Stop a Service
+bash
+Copy
+Edit
+sudo systemctl stop <service>
+Stops the running service.
+
+ Restart a Service
+bash
+Copy
+Edit
+sudo systemctl restart <service>
+Stops and starts the service again — useful for applying changes.
+
+ Reload a Service (Without Restart)
+bash
+Copy
+Edit
+sudo systemctl reload <service>
+Reloads the service configuration without a full restart.
+
+ Enable Service on Boot
+bash
+Copy
+Edit
+sudo systemctl enable <service>
+Configures the system to start the service automatically at boot time.
+
+ Disable Auto-start
+bash
+Copy
+Edit
+sudo systemctl disable <service>
+Prevents the service from starting at boot.
+
+ Check Service Status
+bash
+Copy
+Edit
+systemctl status <service>
+Shows the current status, including active/inactive, logs, and recent activity.
+
+ Check if Service is Enabled
+bash
+Copy
+Edit
+systemctl is-enabled <service>
+Tells whether the service is set to start automatically.
+
+ View Service Logs
+bash
+Copy
+Edit
+journalctl -u <service>
+Displays logs related to the specified service — useful for troubleshooting.
+
+
+
 ## Common Examples
 
 | Command                                      | Description                       |
