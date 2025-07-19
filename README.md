@@ -71,9 +71,6 @@ In Linux, **services (daemons)** are background processes that typically start a
 ---
 
 
-
----
-
 ## systemctl Command Reference
 
 | Action              | Command                                 | Description                           |
