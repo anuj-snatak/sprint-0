@@ -52,7 +52,6 @@ Applies to:
 ---
 
 
----
 
 ##  What is a Service?
 
