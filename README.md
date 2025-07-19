@@ -86,13 +86,12 @@ jenkins – An automation server used for building, testing, and deploying code 
 | View Logs           | `journalctl -u <service>`               | View logs for the service              |
 
 ---
-Bilkul bhai! Tu jo format chah raha hai (jaise ki headings ke under clearly explained commands), usi structure ko follow karte hue main har ek `systemctl` command ka explanation de raha hoon — professional, neat, aur documentation ke layak.
 
 ---
 
 ## 🔧 How to Use `systemctl` Commands (Linux Service Management)
 
-### ✅ Start a Service
+###  Start a Service
 
 Use this command to **start** a service immediately without reboot.
 
@@ -110,7 +109,7 @@ sudo systemctl start nginx
 
 ---
 
-### ⛔ Stop a Service
+###  Stop a Service
 
 Use this command to **stop** a running service.
 
@@ -144,7 +143,7 @@ sudo systemctl restart ssh
 
 ---
 
-### 🔃 Reload a Service (Without Restart)
+###  Reload a Service (Without Restart)
 
 Used when you want the service to reload config files **without a full restart**.
 
@@ -160,7 +159,7 @@ sudo systemctl reload apache2
 
 ---
 
-### 🚀 Enable a Service on Boot
+###  Enable a Service on Boot
 
 This command sets a service to automatically **start at system boot**.
 
@@ -192,7 +191,7 @@ sudo systemctl disable jenkins
 
 ---
 
-### 📊 Check Status of a Service
+###  Check Status of a Service
 
 See current status — whether active, inactive, failed, etc.
 
@@ -208,7 +207,7 @@ systemctl status ssh
 
 ---
 
-### 🔍 Check if a Service is Enabled on Boot
+###  Check if a Service is Enabled on Boot
 
 Shows whether the service is **set to auto-start** on boot.
 
@@ -224,7 +223,7 @@ systemctl is-enabled mysql
 
 ---
 
-### 📝 View Service Logs
+###  View Service Logs
 
 Display logs for a particular service (uses `journalctl`).
 
@@ -240,7 +239,7 @@ journalctl -u nginx
 
 ---
 
-## 💡 Pro Tips:
+##  Pro Tips:
 
 * Always replace `<service>` with the actual service name.
 * Use `sudo` if you're not logged in as root.
