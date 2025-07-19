@@ -249,8 +249,10 @@ journalctl -u nginx
 
 ## References
 
-* **Ubuntu Systemd**: [https://www.freedesktop.org/wiki/Software/systemd/](https://www.freedesktop.org/wiki/Software/systemd/)
-* **systemctl Manual**: [https://man7.org/linux/man-pages/man1/systemctl.1.html](https://man7.org/linux/man-pages/man1/systemctl.1.html)
-* **journalctl Manual**: [https://man7.org/linux/man-pages/man1/journalctl.1.html](https://man7.org/linux/man-pages/man1/journalctl.1.html)
-* **Nginx Docs**: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
-* **Docker and systemd**: [https://docs.docker.com/config/daemon/systemd/](https://docs.docker.com/config/daemon/systemd/)
+| Links                                                                                      | Descriptions                                   |
+|--------------------------------------------------------------------------------------------|------------------------------------------------|
+| https://www.freedesktop.org/wiki/Software/systemd/                                        | Ubuntu systemd official documentation          |
+| https://man7.org/linux/man-pages/man1/systemctl.1.html                                    | systemctl manual page                          |
+| https://man7.org/linux/man-pages/man1/journalctl.1.html                                   | journalctl manual page                         |
+| https://nginx.org/en/docs/                                                                | Official Nginx documentation                   |
+| https://docs.docker.com/config/daemon/systemd/                                            | Docker integration with systemd                |
