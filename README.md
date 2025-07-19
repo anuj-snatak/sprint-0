@@ -229,7 +229,6 @@ journalctl -u nginx
 
 ## Config File Paths
 
----
 
 ###  Nginx
 - **Path**: `/etc/nginx/nginx.conf`  
