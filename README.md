@@ -87,72 +87,78 @@ jenkins – An automation server used for building, testing, and deploying code 
 
 ---
 
-🔧 Systemctl Command Reference (Service Management in Linux)
-Below is a list of commonly used systemctl commands for managing services:
+🔧 Systemctl Command Reference (Service Management in Ubuntu)
+Here’s a cleaner and properly formatted version using collapsible sections (GitHub supports them), code blocks, and markdown best practices:
 
- Start a Service
-bash
+markdown
 Copy
 Edit
+## 🔧 Systemctl Command Reference
+
+<details>
+<summary><strong>▶️ Start a Service</strong></summary>
+
+```bash
 sudo systemctl start <service>
 Starts the specified service immediately.
 
- Stop a Service
+</details> <details> <summary><strong>⛔ Stop a Service</strong></summary>
 bash
 Copy
 Edit
 sudo systemctl stop <service>
 Stops the running service.
 
- Restart a Service
+</details> <details> <summary><strong>🔁 Restart a Service</strong></summary>
 bash
 Copy
 Edit
 sudo systemctl restart <service>
-Stops and starts the service again — useful for applying changes.
+Restarts the service (stop + start).
 
- Reload a Service (Without Restart)
+</details> <details> <summary><strong>🔃 Reload a Service</strong></summary>
 bash
 Copy
 Edit
 sudo systemctl reload <service>
-Reloads the service configuration without a full restart.
+Reloads the service configuration without restarting it.
 
- Enable Service on Boot
+</details> <details> <summary><strong>🚀 Enable Service on Boot</strong></summary>
 bash
 Copy
 Edit
 sudo systemctl enable <service>
-Configures the system to start the service automatically at boot time.
+Enables the service to start automatically at boot time.
 
- Disable Auto-start
+</details> <details> <summary><strong>❌ Disable Service from Auto-start</strong></summary>
 bash
 Copy
 Edit
 sudo systemctl disable <service>
-Prevents the service from starting at boot.
+Disables the service from starting at boot.
 
- Check Service Status
+</details> <details> <summary><strong>📊 Check Service Status</strong></summary>
 bash
 Copy
 Edit
 systemctl status <service>
-Shows the current status, including active/inactive, logs, and recent activity.
+Displays current service status.
 
- Check if Service is Enabled
+</details> <details> <summary><strong>🔍 Check if Enabled</strong></summary>
 bash
 Copy
 Edit
 systemctl is-enabled <service>
-Tells whether the service is set to start automatically.
+Shows whether the service is set to auto-start.
 
- View Service Logs
+</details> <details> <summary><strong>📝 View Service Logs</strong></summary>
 bash
 Copy
 Edit
 journalctl -u <service>
-Displays logs related to the specified service — useful for troubleshooting.
+Displays logs for the specified service.
 
+</details>
 
 
 ## Common Examples
