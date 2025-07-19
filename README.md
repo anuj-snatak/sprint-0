@@ -228,16 +228,26 @@ journalctl -u nginx
 ---
 
 ## Config File Paths
+Nginx
+Configuration file: /etc/nginx/nginx.conf
+→ This is the main configuration file where you define server blocks, ports, reverse proxy settings, SSL, etc.
 
-| Service | Configuration File Path    |
-| ------- | -------------------------- |
-| nginx   | `/etc/nginx/nginx.conf`    |
-| mysql   | `/etc/mysql/mysql.conf.d/` |
-| docker  | `/etc/docker/daemon.json`  |
-| jenkins | `/etc/default/jenkins`     |
-| ufw     | `/etc/ufw/ufw.conf`        |
+MySQL
+Configuration directory: /etc/mysql/mysql.conf.d/
+→ Contains .cnf files for configuring MySQL settings like buffer size, logging, ports, and authentication.
 
----
+Docker
+Configuration file: /etc/docker/daemon.json
+→ JSON file to configure Docker daemon options such as storage driver, log-level, insecure registries, etc.
+
+Jenkins
+Configuration file: /etc/default/jenkins
+→ Used to set environment variables like HTTP_PORT, Java options, and other Jenkins-specific startup parameters.
+
+UFW (Uncomplicated Firewall)
+Configuration file: /etc/ufw/ufw.conf
+→ Controls UFW’s default behavior, logging settings, and whether UFW is enabled at boot.
+
 
 ## Contact Information
 
