@@ -51,22 +51,32 @@ Applies to:
 
 ---
 
-## What is a Service?
 
-In Linux, services (also called daemons) are background programs that start automatically when the system boots, or run when needed. They handle important tasks without user interaction.
+---
 
-Here are a few common ones:
+## 🔧 What is a Service?
 
-nginx – A lightweight and fast web server used to host websites, act as a reverse proxy, or handle load balancing.
+In Linux, **services (daemons)** are background processes that typically start automatically at boot or run when triggered. These services handle essential system or application-level tasks **without direct user interaction**.
 
-mysql – A database service that stores and manages data for web apps or software.
+### 🧩 Common Linux Services
 
-docker – Runs containers. It's used to package apps with their dependencies so they work the same on any system.
+| Service   | Description                                                                                                                |
+| --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `nginx`   | A lightweight, fast **web server** used to host websites, act as a **reverse proxy**, or handle **load balancing**.        |
+| `mysql`   | A **relational database** service that stores and manages data for **web applications** and software.                      |
+| `docker`  | A **container engine** that runs applications inside containers, ensuring they run the same across different environments. |
+| `ssh`     | A secure shell service that enables **remote login and command execution** over encrypted connections.                     |
+| `jenkins` | A **CI/CD automation server** used to build, test, and deploy code automatically in DevOps pipelines.                      |
 
-ssh – Lets you connect to another machine remotely and securely using the terminal.
+---
 
-jenkins – An automation server used for building, testing, and deploying code (CI/CD).
+Agar chaaho toh isme aur bhi columns add kar sakte ho, jaise:
+✅ Default Port, 🔄 Start Command, 📦 Package Name, etc.
 
+Batana ho toh wo version bhi bana dunga.
+
+
+---
 
 
 ---
