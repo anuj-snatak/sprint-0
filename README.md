@@ -1,14 +1,17 @@
+Yeh raha tumhaara **SOP Markdown**, jiska font styling aur visual appearance simple aur clean banaya gaya hai (no emojis, no bold overload, minimal clutter) — GitHub, GitLab, or any Markdown viewer ke liye perfect:
 
+---
+
+````markdown
 # SOP for Managing Services in Ubuntu using `systemctl`
 
 This document provides a complete Standard Operating Procedure (SOP) for managing system services (daemons) on Ubuntu using `systemctl`. It includes viewing, starting, stopping, enabling, disabling, and troubleshooting services — essential for DevOps engineers, system administrators, and students.
 
-
 ## Version History
 
-| Author          | Created on | Version   | Last updated by | Internal Reviewer |
-|-----------------|------------|-----------|------------------|--------------------|
-| Anuj Jain       | 17-07-25   | version 1 | N/A              | Prashnat          |
+| Author      | Created on | Version   | Last updated by | Internal Reviewer |
+|-------------|------------|-----------|------------------|--------------------|
+| Anuj Jain   | 17-07-25   | version 1 | N/A              | Prashnat           |
 
 ---
 
@@ -51,184 +54,143 @@ Applies to:
 
 ---
 
+## What is a Service?
 
+In Linux, services (daemons) are background processes that typically start automatically at boot or run when triggered. These services handle essential system or application-level tasks without direct user interaction.
 
-##  What is a Service?
+### Common Linux Services
 
-In Linux, **services (daemons)** are background processes that typically start automatically at boot or run when triggered. These services handle essential system or application-level tasks **without direct user interaction**.
-
-###  Common Linux Services
-
-| Service   | Description                                                                                                                |
-| --------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `nginx`   | A lightweight, fast **web server** used to host websites, act as a **reverse proxy**, or handle **load balancing**.        |
-| `mysql`   | A **relational database** service that stores and manages data for **web applications** and software.                      |
-| `docker`  | A **container engine** that runs applications inside containers, ensuring they run the same across different environments. |
-| `ssh`     | A secure shell service that enables **remote login and command execution** over encrypted connections.                     |
-| `jenkins` | A **CI/CD automation server** used to build, test, and deploy code automatically in DevOps pipelines.                      |
+| Service   | Description |
+|-----------|-------------|
+| nginx     | A lightweight, fast web server used to host websites, act as a reverse proxy, or handle load balancing. |
+| mysql     | A relational database service that stores and manages data for web applications and software. |
+| docker    | A container engine that runs applications inside containers, ensuring they run the same across different environments. |
+| ssh       | A secure shell service that enables remote login and command execution over encrypted connections. |
+| jenkins   | A CI/CD automation server used to build, test, and deploy code automatically in DevOps pipelines. |
 
 ---
-
 
 ## systemctl Command Reference
 
-| Action              | Command                                 | Description                           |
-|---------------------|------------------------------------------|----------------------------------------|
-| Start               | `sudo systemctl start <service>`        | Start the service immediately          |
-| Stop                | `sudo systemctl stop <service>`         | Stop the running service               |
-| Restart             | `sudo systemctl restart <service>`      | Restart the service                    |
-| Reload              | `sudo systemctl reload <service>`       | Reload service config without restart  |
-| Enable              | `sudo systemctl enable <service>`       | Enable service to start on boot        |
-| Disable             | `sudo systemctl disable <service>`      | Disable service from auto-start        |
-| Check Status        | `systemctl status <service>`            | Show current status of the service     |
-| Check if Enabled    | `systemctl is-enabled <service>`        | Show if service is enabled on boot     |
-| View Logs           | `journalctl -u <service>`               | View logs for the service              |
+| Action            | Command                             | Description                          |
+|-------------------|--------------------------------------|--------------------------------------|
+| Start             | `sudo systemctl start <service>`     | Start the service immediately        |
+| Stop              | `sudo systemctl stop <service>`      | Stop the running service             |
+| Restart           | `sudo systemctl restart <service>`   | Restart the service                  |
+| Reload            | `sudo systemctl reload <service>`    | Reload service config without restart |
+| Enable            | `sudo systemctl enable <service>`    | Enable service to start on boot      |
+| Disable           | `sudo systemctl disable <service>`   | Disable service from auto-start      |
+| Check Status      | `systemctl status <service>`         | Show current status of the service   |
+| Check if Enabled  | `systemctl is-enabled <service>`     | Show if service is enabled on boot   |
+| View Logs         | `journalctl -u <service>`            | View logs for the service            |
 
 ---
 
-##  How to Use `systemctl` Commands (Linux Service Management)
+## How to Use `systemctl` Commands
 
-###  Start a Service
-
-Use this command to **start** a service immediately without reboot.
+### Start a Service
 
 ```bash
 sudo systemctl start <service>
-```
+````
 
-**Purpose**: Activates the specified service.
-
-**Example**:
+Example:
 
 ```bash
 sudo systemctl start nginx
 ```
 
----
-
-###  Stop a Service
-
-Use this command to **stop** a running service.
+### Stop a Service
 
 ```bash
 sudo systemctl stop <service>
 ```
 
-**Purpose**: Terminates the service that is currently active.
-
-**Example**:
+Example:
 
 ```bash
 sudo systemctl stop mysql
 ```
 
----
-
-###  Restart a Service
-
-Use this to **stop and then start** the service again — useful when config changes are made.
+### Restart a Service
 
 ```bash
 sudo systemctl restart <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 sudo systemctl restart ssh
 ```
 
----
-
-###  Reload a Service (Without Restart)
-
-Used when you want the service to reload config files **without a full restart**.
+### Reload a Service (Without Restart)
 
 ```bash
 sudo systemctl reload <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 sudo systemctl reload apache2
 ```
 
----
-
-###  Enable a Service on Boot
-
-This command sets a service to automatically **start at system boot**.
+### Enable a Service on Boot
 
 ```bash
 sudo systemctl enable <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 sudo systemctl enable docker
 ```
 
----
-
-###  Disable a Service from Auto-Starting
-
-Prevent a service from starting **automatically at boot time**.
+### Disable a Service from Auto-Starting
 
 ```bash
 sudo systemctl disable <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 sudo systemctl disable jenkins
 ```
 
----
-
-###  Check Status of a Service
-
-See current status — whether active, inactive, failed, etc.
+### Check Status of a Service
 
 ```bash
 systemctl status <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 systemctl status ssh
 ```
 
----
-
-###  Check if a Service is Enabled on Boot
-
-Shows whether the service is **set to auto-start** on boot.
+### Check if a Service is Enabled
 
 ```bash
 systemctl is-enabled <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 systemctl is-enabled mysql
 ```
 
----
-
-###  View Service Logs
-
-Display logs for a particular service (uses `journalctl`).
+### View Service Logs
 
 ```bash
 journalctl -u <service>
 ```
 
-**Example**:
+Example:
 
 ```bash
 journalctl -u nginx
@@ -236,75 +198,66 @@ journalctl -u nginx
 
 ---
 
-##  Pro Tips:
+## Common Examples
 
-* Always replace `<service>` with the actual service name.
-* Use `sudo` if you're not logged in as root.
-* To list all active services:
-
-  ```bash
-  systemctl list-units --type=service
-  ```
+| Command                          | Description                   |
+| -------------------------------- | ----------------------------- |
+| `sudo systemctl start docker`    | Start Docker service          |
+| `sudo systemctl enable mysql`    | Enable MySQL to start on boot |
+| `sudo systemctl restart ssh`     | Restart SSH service           |
+| `sudo systemctl disable jenkins` | Disable Jenkins auto-start    |
+| `systemctl status nginx`         | Check status of Nginx         |
 
 ---
 
-
-
-
-## Common Examples
-
-| Command                                      | Description                       |
-|----------------------------------------------|-----------------------------------|
-| `sudo systemctl start docker`               | Start Docker service              |
-| `sudo systemctl enable mysql`               | Enable MySQL to start on boot     |
-| `sudo systemctl restart ssh`                | Restart SSH service               |
-| `sudo systemctl disable jenkins`            | Disable Jenkins auto-start        |
-| `systemctl status nginx`                    | Check status of Nginx             |
-
 ## Service Validation Checklist
 
-| Validation Step              | Command                          | Expected Output         |
-|------------------------------|----------------------------------|-------------------------|
-| Check if service is running  | `systemctl status <service>`     | `active (running)`      |
-| Check if service is enabled  | `systemctl is-enabled <service>` | `enabled`               |
-| View service logs            | `journalctl -u <service>`        | Service logs appear     |
-| Validate nginx config        | `sudo nginx -t`                  | Syntax is OK message    |
+| Validation Step       | Command                          | Expected Output  |
+| --------------------- | -------------------------------- | ---------------- |
+| Is service running?   | `systemctl status <service>`     | active (running) |
+| Is service enabled?   | `systemctl is-enabled <service>` | enabled          |
+| View service logs     | `journalctl -u <service>`        | Logs appear      |
+| Validate nginx config | `sudo nginx -t`                  | Syntax is OK     |
+
+---
 
 ## Troubleshooting
 
-| Issue                        | Cause / Fix                                              |
-|------------------------------|----------------------------------------------------------|
-| Service fails to start       | Run `journalctl -xe` to check logs                      |
-| Port already in use          | Use `sudo lsof -i :<port>` or `ss -tuln | grep :<port>`  |
-| Invalid config (e.g. nginx)  | Run `sudo nginx -t` to test config                      |
-| Not starting on boot         | Run `sudo systemctl enable <service>`                   |
+| Issue                       | Cause / Fix                              |                |
+| --------------------------- | ---------------------------------------- | -------------- |
+| Service fails to start      | Run `journalctl -xe` to view logs        |                |
+| Port already in use         | Use `sudo lsof -i :<port>` or \`ss -tuln | grep :<port>\` |
+| Invalid config (e.g. nginx) | Run `sudo nginx -t` to check config      |                |
+| Not starting on boot        | Run `sudo systemctl enable <service>`    |                |
+
+---
 
 ## Config File Paths
 
-| Service     | Configuration File Path             |
-|-------------|--------------------------------------|
-| nginx       | `/etc/nginx/nginx.conf`             |
-| mysql       | `/etc/mysql/mysql.conf.d/`          |
-| docker      | `/etc/docker/daemon.json`           |
-| jenkins     | `/etc/default/jenkins`              |
-| ufw         | `/etc/ufw/ufw.conf`                 |
+| Service | Configuration File Path    |
+| ------- | -------------------------- |
+| nginx   | `/etc/nginx/nginx.conf`    |
+| mysql   | `/etc/mysql/mysql.conf.d/` |
+| docker  | `/etc/docker/daemon.json`  |
+| jenkins | `/etc/default/jenkins`     |
+| ufw     | `/etc/ufw/ufw.conf`        |
 
-
+---
 
 ## Contact Information
 
-| Name            | Email address |
-|-----------------|---------------|
-| Anuj Jain       | anuj.jain@mygurukulam.co      | 
-
-
+| Name      | Email Address                                               |
+| --------- | ----------------------------------------------------------- |
+| Anuj Jain | [anuj.jain@mygurukulam.co](mailto:anuj.jain@mygurukulam.co) |
 
 ---
 
 ## References
 
-- Ubuntu Systemd Documentation: https://www.freedesktop.org/wiki/Software/systemd/
-- systemctl Manual: https://man7.org/linux/man-pages/man1/systemctl.1.html
-- journalctl Manual: https://man7.org/linux/man-pages/man1/journalctl.1.html
-- Nginx Official Docs: https://nginx.org/en/docs/
-- Docker Systemd Integration: https://docs.docker.com/config/daemon/systemd/
+* Ubuntu Systemd: [https://www.freedesktop.org/wiki/Software/systemd/](https://www.freedesktop.org/wiki/Software/systemd/)
+* systemctl Manual: [https://man7.org/linux/man-pages/man1/systemctl.1.html](https://man7.org/linux/man-pages/man1/systemctl.1.html)
+* journalctl Manual: [https://man7.org/linux/man-pages/man1/journalctl.1.html](https://man7.org/linux/man-pages/man1/journalctl.1.html)
+* Nginx Docs: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
+* Docker and systemd: [https://docs.docker.com/config/daemon/systemd/](https://docs.docker.com/config/daemon/systemd/)
+
+```
