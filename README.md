@@ -278,21 +278,3 @@ journalctl -u nginx
 | https://nginx.org/en/docs/                                                                | Official Nginx documentation                   |
 | https://docs.docker.com/config/daemon/systemd/                                            | Docker integration with systemd                | bhai ye merne document banayi h sir ne feedback diya h Directory structure not correct.
 
-MD format should be maintained 
-
-Add only required things 
-
-Mention the type of document whether SOP ,POC, Detailed Doc
-
-Correct the punctuation and spells
-
-Attach document link in PR
-
-Dont add unncessory content as of the requirement 
-
-#Prashant
-
-
-
-
-ye
